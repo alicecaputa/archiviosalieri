@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alice Caputa" />
+    <meta
+      name="description"
+      content="Archivio digitale dedicato alla vita e all'opera di Antonio Salieri (1750-1825)" />
+    <meta
+      name="keywords"
+      content="Salieri, opera, XVIII secolo, Vienna, Schubert, Beethoven" />
+    <title>
+      Archivio Salieri | Catalogo
+    </title>
+
+    <!-- FAVICON -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5" />
+    <meta name="apple-mobile-web-app-title" content="Archivio Salieri" />
+    <meta name="application-name" content="Archivio Salieri" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- FONTS -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" />
+    <!-- Icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- FOGLIO DI STILE -->
+    <link rel="stylesheet" href="style/style.css"/>
+
+    <!-- SCRIPT ESTERNO -->
+    <script src="js/script.js"></script>
+
+  </head>
+  <body>
+    <nav class="secondary">
+      <span id="home"><a href="index.html">Home</a></span>
+      <span><a href="#">Progetto</a></span>
+      <span><a href="#">Biografia</a></span>
+      <span class="actualPage"><a>Catalogo</a></span>
+      <span id="percorsi"><a href="pathways.html">Percorsi</a></span>
+    </nav>
+    <form class="searchBar" action="action_page.php">
+      <input type="text" placeholder="Cerca.." name="search" autocomplete="off">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form> 
+    <div class="pageContent">
+      <aside class="left">
+        <h3>Filtra per ...</h3>
+        <div class="filterBar">
+          <button class="accordion">Persona</button>
+          <div class="panel">
+          </div>
+          <button class="accordion">Epoca di creazione</button>
+          <div class="panel">
+          </div>
+          <button class="accordion">Luogo di creazione</button>
+          <div class="panel">
+          </div>
+          <button class="accordion">Formato</button>
+          <div class="panel">
+            <form>
+              <input type="checkbox" id="imgCheck" onclick="Filter('imgCheck', 'image')">
+              <label>Immagine</label><br>
+              <input type="checkbox" id="audioCheck" onclick="Filter('audioCheck', 'audio')">
+              <label>Audio</label><br>
+              <input type="checkbox" id="textCheck" onclick="Filter('textCheck', 'text')">
+              <label>Testo</label><br>
+              <input type="checkbox" id="musNotCheck" onclick="Filter('musNotCheck', 'musNot')">
+              <label>Notazione musicale</label><br>
+            </form>
+          </div>
+          <button class="accordion">Tema</button>
+          <div class="panel">
+            <form>
+              <input type="checkbox" id="vocMusCheck" onclick="Filter('vocMusCheck', 'vocMus')">
+              <label for="vocale">Musica vocale</label><br>
+              <input type="checkbox" id="instMusCheck" onclick="Filter('instMusCheck', 'instMus')">
+              <label>Musica strumentale</label><br>
+              <input type="checkbox" id="pupilsCheck" onclick="Filter('pupilsCheck', 'pupils')">
+              <label>Allievi</label><br>
+              <input type="checkbox" id="privCheck" onclick="Filter('privCheck', 'priv')">
+              <label>Vita privata</label><br>
+      
+              <input type="checkbox" id="imperCheck" onclick="Filter('imperCheck', 'imper')">
+              <label>Corte imperiale</label><br>
+              <input type="checkbox" id="tonkunstCheck" onclick="Filter('tonkunstCheck', 'tonkunst')">
+              <label>Tonkünstler-Societät</label><br>
+              <input type="checkbox" id="iconCheck" onclick="Filter('iconCheck', 'icon')">
+              <label>Iconografia e monumenti</label><br>
+              <input type="checkbox" id="postCheck" onclick="Filter('postCheck', 'post')">
+              <label>Ricezione postuma</label><br>
+            </form>
+          </div>
+      
+          <button class="accordion">Genere</button>
+          <div class="panel">
+            <form>
+              <input type="checkbox" id="musMs" name="musMs">
+              <label for="musMs">Musica manoscritta</label><br>
+              <input type="checkbox" id="musStm" name="musStm">
+              <label for="musStm">Musica a stampa</label><br>
+              <input type="checkbox" id="librStm" name="librStm">
+              <label for="librStm">Libretti a stampa</label><br>
+              <input type="checkbox" id="pare" name="pare">
+              <label for="pare">Pareri sulle opere</label><br>
+              <input type="checkbox" id="bozFig" name="bozFig">
+              <label for="bozFig">Bozzetti e figurini</label><br>
+              <input type="checkbox" id="manif" name="manif">
+              <label for="manif">Manifesti teatrali</label><br>
+              <input type="checkbox" id="certif" name="certif">
+              <label for="certif">Certificati per gli allievi</label><br>
+              <input type="checkbox" id="esComp" name="esComp">
+              <label for="esComp">Esercizi di composizione</label><br>
+              <input type="checkbox" id="lett" name="lett">
+              <label for="lett">Lettere</label><br>
+              <input type="checkbox" id="ritrCar" name="ritrCar">
+              <label for="ritrCar">Ritratti e caricature</label><br>
+              <input type="checkbox" id="bio" name="bio">
+              <label for="bio">Biografie</label><br>
+              <input type="checkbox" id="monum" name="monum">
+              <label for="monum">Progetti di monumenti</label><br>
+              <input type="checkbox" id="regSon" name="regSon">
+              <label for="regSon">Registrazioni sonore</label><br>
+            </form>
+          </div>
+        </div>
+      </aside>
+      <aside class="right">
+        <div class="guide">
+          <i class="bi bi-question-lg"></i>
+          <p>Per filtrare gli items del catalogo, selezionare una o più opzioni dal menu laterale. I filtri attivi vengono mostrati nella parte superiore della pagina. <br/> I nomi di persona riportati alla voce "Persone" possono fare riferimento indistintamente al creatore, al destinatario o al soggetto di un item. </p>
+        </div>
+        <div class="box">
+          <h3><i class="bi bi-plus-lg"></i> Ultimo item inserito</h3>
+          <a href="item.html"><p>Antonio Salieri e Paul Wranitzky a Ludwig van Beethoven. Vienna, 10 febbraio 1797</p></a>
+        </div>
+      </aside>
+      <section class="gridContainer">
+        <div class="grid-item" n="1">
+          <div class="card musNot pupils vocMus" n="1">
+            <a href="#">
+              <img src="img/items/cantataSchubert.jpeg"/>
+              <div class="textDescr">
+                <h4>Cantata per il cinquantesimo giubileo del Signor Salieri</h4>
+                <p>Schubert, Franz</p>  
+                <p class="date">Vienna, 1816</p>
+              </div>
+            </a>
+          </div>
+          <div class="card image icon" n="2">
+            <a href="#">
+              <img src="img/items/litografia_steiner.jpg"/>
+              <div class="textDescr">
+                <h4>Antonio Salieri &lpar;incisione da ritratto di Natale Schiavoni&rpar;</h4>
+                <p>Ehrenreich, Adam Sandor</p>
+                <p class="date">Vienna, 1810</p>
+              </div>
+            </a>
+          </div>
+          <div class="card image pupils icon post" n="3">
+            <a href="">
+              <img src="img/items/caricatura_Beethoven.jpg"/>
+              <div class="textDescr">
+                <h4>Beethoven al pianoforte, circondato da Antonio Salieri, Anna Maria ...</h4>
+                <p>Fischer, Adolf; <br/>
+                  Förchtgott, Rudolf Guido</p>
+                <p class="date">Linz, 1961</p>
+              </div>
+            </a>
+          </div>
+          <div class="card text pupils" n="4">
+            <a href="#">
+              <img src="img/items/certificato_FXW.jpg"/>
+              <div class="textDescr">
+                <h4>Certificato per Franz Xaver Wolfgang Mozart</h4>
+                <p>Salieri, Antonio</p>
+                <p class="date">Vienna, 30 marzo 1807</p>
+              </div>
+            </a>
+          </div>
+          <div class="card text vocMus post" n="5">
+            <a href="#">
+              <img src="img/items/manifesto_Axur.jpg" />
+              <div class="textDescr">
+                <h4>Manifesto teatrale per l'opera <span class="italic">Axur</span></h4>
+                <p class="date">Lipsia, 28 agosto 1794</p>
+              </div>
+            </a>
+          </div>
+          <div class="card musNot instMus" n="6">
+            <a href="#">
+              <img src="img/items/autConcInC.jpg" />
+              <div class="textDescr">
+                <h4>Concerto per clavicembalo e orchestra in do maggiore</h4>
+                <p>Salieri, Antonio</p>
+                <p class="date">Vienna, 1773</p>
+              </div>
+            </a>
+          </div>
+          <div class="card text vocMus" n="7">
+            <a href="#">
+              <img src="img/items/libretto_Trofonio.jpg"/>
+              <div class="textDescr">
+                <h4>La grotta di Trofonio. Opera comica da rappresentarsi ...</h4>
+                <p>Casti, Giovanni Battista</p>
+                <p class="date">Vienna, 1785</p>
+              </div>
+            </a>
+          </div>
+          <div class="card musNot vocMus pupils" n="8">
+            <a href="#">
+              <img src="img/items/DanaidesBeeth.jpg"/>
+              <div class="textDescr">
+                <h4>Copia autografa di un estratto da <span class="italic">Les Danaïdes</span></h4>
+                <p>Beethoven, Ludwig van</p>
+                <p class="date">Vienna, 1803 ca.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="grid-item" n="2">
+            <div class="card image vocMus" n="1">
+              <a href="#">
+               <img src="img/items/bozzetto_Axur.png" />
+               <div class="textDescr">
+                  <h4>Bozzetto per l'opera <span class="italic">Axur</span></h4>
+                  <p>Schinkel, Karl Friedrich</p>
+                  <p class="date">Berlino, 1820</p>
+                </div>
+              </a>
+            </div>
+            <div class="card image vocMus" n="2">
+              <a href="#">
+                <img src="img/items/figurino_Tarare.JPEG"/>
+                <div class="textDescr">
+                  <h4>Figurino per l'opera <span class="italic";>Tarare</span> </h4>
+                  <p>Garneray, Auguste (?)</p>
+                  <p class="date">Parigi, 1823</p>
+                </div>
+              </a>
+            </div>
+            <div class="card audio instMus post" n="3">
+              <a href="#">
+                <img src="img/items/pianoCiccol.jpg"/>
+                <div class="textDescr">
+                  <h4>Due concerti per pianoforte e orchestra</h4>
+                  <p>Ciccolini, Aldo; <br/>Salieri, Antonio ...</p>
+                  <p class="date">Italia, 1978</p>
+                </div>
+              </a>
+            </div>
+            <div class="card image icon post" n="4">
+              <a href="#">
+                <img src="img/items/litografia_tomba.jpg" />
+                <div class="textDescr">
+                    <h4>Salieri's monument auf dem Matzleinsdorfer Friedhofe bei Wien</h4>
+                    <p>Rauh, Johann</p>
+                    <p class="date">Vienna (?), dopo il 1846</p>
+                  </div>
+              </a>
+            </div>
+            <div class="card musNot pupils" n="5">
+              <a href="#">
+                <img src="img/items/esercizi_Schubert.jpeg" />
+                <div class="textDescr">
+                    <h4>Esercizi di contrappunto</h4>
+                    <p>Salieri, Antonio; <br/>Schubert, Franz</p>
+                    <p class="date">Vienna, 18 giugno 1812</p>
+                  </div>
+              </a>
+            </div>
+            <div class="card text vocMus" n="6">
+              <a href="#">
+                <img src="img/items/libretto_Axur.jpg" />
+                <div class="textDescr">
+                  <h4>Axur re d'Ormus. Dramma tragicomico in cinque atti da rappresentarsi ...</h4>
+                  <p>Da Ponte, Lorenzo</p>
+                  <p class="date">Vienna, 1787</p>
+                </div>
+              </a>
+            </div>
+            <div class="card text imper" n="7">
+              <a href="#">
+                <img src="img/items/lettera.jpg" />
+                <div class="textDescr">
+                  <h4>Antonio Salieri a Ignoto (Johann Ferdinand von Kuefstein?)</h4>
+                  <p>Salieri, Antonio</p>
+                  <p class="date">Vienna (?), 1815-1822</p>
+                </div>
+              </a>
+            </div>
+            <div class="card text post" n="8">
+              <a href="#">
+                <img src="img/items/bioMosel.jpg" />
+                <div class="textDescr">
+                  <h4>Ueber das Leben und die Werke des Anton Salieri</h4>
+                  <p>Mosel, Ignaz von </p>
+                  <p class="date">Vienna, 1827</p>
+                </div>
+              </a>
+            </div>
+        </div>
+        <div class="grid-item" n="3">
+            <div class="card text post" n="1">
+              <a href="#">
+                <img src="img/items/letteraBerlioz.JPEG" />
+                <div class="textDescr">
+                  <h4>Hector Berlioz a Humbert Ferrand</h4>
+                  <p>Berlioz, Hector</p>
+                  <p class="date">Parigi, 22 marzo 1862</p>
+                </div>
+              </a>
+            </div>
+            <div class="card musNot vocMus" n="2">
+              <a href="#">
+                <img src="img/items/frontespizio_Europa.jpg" />
+                <div class="textDescr">
+                    <h4>Europa riconosciuta</h4>
+                    <p>Salieri, Antonio</p>
+                    <p class="date">Milano, 1778</p>
+                  </div>
+              </a>
+            </div>
+            <div class="card audio instMus post" n="3">
+              <a href="#">
+                <img src="img/items/concViolon.JPEG" />
+                <div class="textDescr">
+                    <h4>Concerto per violino, oboe e violoncello in re maggiore</h4>
+                    <p>Cambini, Giovanni; <br/>Salieri, Antonio ...</p>
+                    <p class="date">Milano (?), 1959</p>
+                  </div>
+              </a>
+            </div>
+            <div class="card text vocMus" n="4">
+              <a href="#">
+                <img src="img/items/parere_Axur_1.jpg" />
+                <div class="textDescr">
+                    <h4>Parere sull'opera <span class="italic">Axur</span></h4>
+                    <p>Salieri, Antonio</p>
+                    <p class="date">Vienna, 1787</p>
+                  </div>
+              </a>
+            </div>
+            <div class="card text pupils" n="5">
+              <a href="#">
+                <img src="img/items/certificato_Schubert.jpeg" />
+                <div class="textDescr">
+                    <h4>Certificato per Franz Schubert</h4>
+                    <p>Salieri, Antonio</p>
+                    <p class="date">Vienna, 21 settembre 1819</p>
+                  </div>
+              </a>
+            </div>
+            <div class="card image icon post" n="6">
+              <a href="#">
+                <img src="img/items/fotografia_tomba.jpg" />
+                <div class="textDescr">
+                    <h4>Wien 11, Zentralfriedhof, Monumento funebre ad Antonio Salieri</h4>
+                    <p>Anonimo</p>
+                    <p class="date">Vienna, 1938</p>
+                  </div>
+              </a>
+            </div>
+            <div class="card text pupils tonkunst" n="7">
+              <a href="item.html">
+                <img src="img/items/invito_Beethoven.jpg"/>
+                <div class="textDescr">
+                    <h4>Antonio Salieri e Paul Wranitzky a Ludwig van Beethoven</h4>
+                    <p>Salieri, Antonio; <br/>Wranitzky, Paul</p>
+                    <p class="date">Vienna, 10 febbraio 1797</p>
+                </div>
+              </a>
+            </div>
+            <div class="card image icon" n="8">
+              <a href="#">
+                <img src="img/items/silhouette.jpg" />
+                <div class="textDescr">
+                    <h4>Antonio Salieri</h4>
+                    <p>Loeschenkohl, Hieronymus</p>
+                    <p class="date">Vienna, ?</p>
+                </div>
+              </a>
+            </div>
+        </div>
+      </section>
+    </div>
+    <footer class="dark">&copy; Copyright 2024 - Archivio Salieri | CC BY-NC</footer>
+
+    <script>
+      Accordion();
+    </script>
+    
+  </body>
+</html>

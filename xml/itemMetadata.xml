@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:dcterms="http://purl.org/dc/terms/">
+
+  <dc:title>Antonio Salieri e Paul Wranitzky a Ludwig van Beethoven, Vienna, 10 febbraio 1797 (riproduzione digitale)</dc:title>
+
+  <dc:creator xsi:type="viaf" ref="http://viaf.org/viaf/17408816">Salieri, Antonio, 1750-1825</dc:creator>
+  <dc:creator xsi:type="viaf" ref="http://viaf.org/viaf/27330009">Wranitzky, Paul, 1756-1808</dc:creator>
+
+  <dc:subject xsi:type="viaf" ref="http://viaf.org/viaf/17408816">Salieri, Antonio, 1750-1825</dc:subject>
+  <dc:subject xsi:type="viaf" ref="http://viaf.org/viaf/27330009">Wranitzky, Paul, 1756-1808</dc:subject>
+  <dc:subject xsi:type="viaf" ref="http://viaf.org/viaf/32182557">Beethoven, Ludwig van, 1770-1827</dc:subject>
+  <dc:subject xml:lang="de-AT">Musikalische Wittwen und Waisen Gesellschaft</dc:subject>
+  <dc:subject xml:lang="de-AT" xsi:type="viaf" ref="http://viaf.org/viaf/237042222">Tonkünstler-Sozietät</dc:subject>
+
+  <dcterms:spatial xsi:type="GettyTGN" ref="http://vocab.getty.edu/page/tgn/7003321" xml:lang="de-AT">Wien</dcterms:spatial>
+  <dcterms:temporal>1797-02-10</dcterms:temporal>
+
+  <dc:language>de-AT</dc:language>
+
+  <dc:description>Riproduzione digitale della lettera inviata da Antonio Salieri e Paul Wranitzky a Ludwig van Beethoven per conto della Musikalische Wittwen und Waisen Gesellschaft (Tonkünstler-Sozietät), datata 10 febbraio 1797</dc:description>
+
+  <dcterms:type xsi:type="dct:DCMIType">Text</dcterms:type>
+  <!-- Using DCMI vocabulary (https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dcmitype/Text/: "Examples include books, letters, dissertations, poems, newspapers, articles, archives of mailing lists. Note that facsimiles or images of texts are still of the genre Text") -->
+
+  <dc:format xsi:type="MIME">image/jpg</dc:format>
+
+  <dc:source xsi:type="PURL">https://www.beethoven.de/de/media/view/5107407428517888/</dc:source>
+
+  <dc:publisher xsi:type="viaf" ref="http://viaf.org/viaf/152212098">Beethoven-Haus Bonn</dc:publisher>
+
+  <dc:date>2006-12-03</dc:date>
+
+  <dc:identifier xsi:type="PURL">https://www.beethoven.de/file/download/U0c2UXFyU2tzaHA1Ri9zb3VyY2UvMDAwMDIxMzFfMDAwMV9nYW56LmpwZwAwAA==?sig=7f128ad5b0177686441f47115973d218a1b9054639b787810e021899e4d692968396fa506f7d0235862c5b5f93f49657</dc:identifier>
+
+  <dc:rights>CC BY-NC</dc:rights>
+
+</metadata>

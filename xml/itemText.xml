@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Antonio Salieri e Paul Wranitzky a Ludwig van Beethoven, Vienna, 10 febbraio 1797 (fulltext)</title>
+        <author n="1" sameAs="http://viaf.org/viaf/17408816">Salieri, Antonio, 1750-1825</author>
+        <author n="2" sameAs="http://viaf.org/viaf/27330009">Wranitzky, Paul, 1756-1808</author>
+        <respStmt>
+          <resp>Edizione diplomatica e codifica XML/TEI</resp>
+          <persName xml:id="AC">Alice Caputa</persName>
+        </respStmt>
+        <respStmt>
+          <resp>Edizione critica in traduzione italiana e codifica XML/TEI</resp>
+          <persName ref="#AC">Alice Caputa</persName>
+        </respStmt>
+        <respStmt>
+          <resp>Descrizione della fonte manoscritta</resp>
+          <orgName xml:id="BH">Beethoven-Haus Bonn</orgName>
+        </respStmt>
+        <respStmt>
+          <resp>Traduzione italiana e codifica XML/TEI della descrizione della fonte manoscritta</resp>
+          <persName ref="#AC">Alice Caputa</persName>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>&#169; 2024 - Archivio Salieri | Riproduzione libera per scopi non commerciali</p>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <settlement>Bonn</settlement>
+            <repository>Beethoven-Haus Bonn</repository>
+            <idno type="BH">BH 194</idno>
+          </msIdentifier>
+          <physDesc>
+            <objectDesc>
+              <p>Bifolio; c. 1r indicazione del destinatario, cc. 1v-2r vuote, c. 2v testo della lettera; 37,2 x 24,8 cm; c. 2v recante indirizzo "An / Herrn / Van / Betthoven.", sigillo, macchie di inchiostro; alla c. 1r annotazione "A concl. Sessionis / de dato 20ma Januarii / 1797." al di sotto del corpo della lettera; datata "Wien d 10ten Februar / a. c.; incipit "Die musikalische Wittwen und Waisen Gesellschaft giebt sich die Ehre"; lettera redatta per mano di Paul Wranitzky, sottoscritta dallo stesso e da Antonio Salieri.</p>
+            </objectDesc>
+            <handDesc>
+              <handNotes>
+                <handNote xml:id="PW" scribe="Paul Wranitzky" script="handwritten" medium="sepiaink" scope="major">
+                  <p>Mano principale del documento; tratto sottile</p>
+                </handNote>
+                <handNote xml:id="AS" scribe="Antonio Salieri" script="handwritten" medium="sepiaink" scope="minor">
+                  <p>Sola firma autografa; tratto pastoso</p>
+                </handNote>
+              </handNotes>
+            </handDesc>
+          </physDesc>
+        </msDesc>
+        <listPerson>
+          <person n="1" xml:id="Salieri" corresp="#AS">
+            <persName sameAs="http://viaf.org/viaf/17408816">
+              <forename>Antonio</forename>
+              <surname>Salieri</surname>
+            </persName>
+            <note>Vicepresidente della Tonkünstler-Sozietät dal 1795 al 1824</note>
+          </person>
+          <person n="2" xml:id="Wranitzky" corresp="#PW">
+            <persName sameAs="http://viaf.org/viaf/27330009">
+              <forename>Paul</forename>
+              <surname>Wranitzky</surname>
+            </persName>
+            <note>Segretario della Tonkünstler-Sozietät dal 1794 al 1807</note>
+          </person>
+          <person n="3" xml:id="Beethoven">
+            <persName sameAs="http://viaf.org/viaf/32182557">
+              <forename>Ludwig</forename>
+              <nameLink>van</nameLink>
+              <surname>Beethoven</surname>
+            </persName>
+          </person>
+        </listPerson>
+        <listPlace>
+          <placeName xml:id="Vienna" sameAs="http://vocab.getty.edu/page/tgn/7003321">Vienna</placeName>
+        </listPlace>
+        <listOrg>
+          <org xml:id="MWWG">
+            <orgName>musikalische Wittwen und Waisen Gesellschaft</orgName>
+            <note>Denominazione alternativa della Tonkünstler-Sozietät</note>
+          </org>
+        </listOrg>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <correspDesc>
+        <correspAction type="sent">
+          <persName n="1">Salieri, Antonio, 1750-1825</persName>
+          <persName n="2">Wranitzky, Paul, 1756-1808</persName>
+          <settlement>Vienna</settlement>
+          <date when="1797-02-10">10 febbraio 1797</date>
+        </correspAction>
+        <correspAction type="received">
+          <persName>Beethoven, Ludwig van, 1770-1827</persName>
+          <settlement>Vienna</settlement>
+        </correspAction>
+      </correspDesc>
+    </profileDesc>
+  </teiHeader>
+
+  <group>
+    <text xml:id="originaleTedesco" xml:lang="de-AT">
+      <pb xml:id="BH_194_1r"/>
+      <div xml:id="1r">
+        <opener hand="PW">
+          <addrLine>
+            <persName ref="#Beethoven">
+              <roleName type="honorific"><choice><abbr type="suspension title">H</abbr><expan>Herrn.</expan></choice></roleName>
+              <nameLink>Van</nameLink>
+              <surname>Bethoven</surname>
+            </persName>
+          </addrLine>
+          <salute>Schazbahrester Herr!</salute>
+        </opener>
+        <p hand="PW">Die <orgName ref="#MWWG">musikalische Wittwen und Waisen Gesellschaft</orgName> gibt sich die Ehre, Ihnen beyliegend mit einem freyen Billet zu allen künftigen Akademien aufzuwarten; Sie belieben solches jedesmal nur vorzuzeigen, und wieder zu behalten.</p>
+        <p hand="PW">Verzeihen Sie, daß die Sozietaet, der die Versorgung ihrer Wittwen und Waisen am Herzen liegt, nicht anders, als eben so für Dero ihr bereits erwiesene Dienste, sich dankbahr zeigen kann: Nehmen Sie dieses als ihren guten Willen an, und sind Sie so gütig die Wittwen und Waisen der Sozietaet auch ins <choice><sic>künfige</sic><corr cert="high" resp="#AC">künftige</corr></choice> durch Ihre Vortrefliche Talente unterstützen zu wollen.</p>
+        <closer>
+          <salute hand="PW">Ewig bleibt Ihnen Verpflichtet</salute>
+          <signed hand="PW">
+            Die <orgName ref="#MWWG">musikalische Wittwen <lb/>und Waisen Gesellschaft</orgName>
+          </signed>
+          <p hand="PW">
+            <foreign xml:lang="la">Ex <abbr type="suspension">concl.</abbr> Sessionis <lb/>de dato <date when="1797-01-20"><abbr type="superscription">20<sup>mo</sup></abbr> Januarij <lb/>797</date>.</foreign>
+          </p>
+          <dateline hand="PW">
+            <placeName ref="#Vienna">Wien</placeName> <date when="1797-02-10"><choice><abbr type="suspension">d</abbr> <expan>den</expan></choice> <abbr type="superscription">10<sup>ten</sup></abbr> Februar <lb/><abbr type="acronym">a.c.</abbr></date>
+          </dateline>
+          <signed hand="#AS">
+            <person>
+              <persName ref="#Salieri">
+                <forename><abbr type="suspension">Ant.</abbr></forename>
+                <surname>Salieri</surname>
+              </persName>
+              <occupation><choice><abbr type="acronym">m.d.c.</abbr><expan>maestro di cappella</expan></choice></occupation>
+            </person>
+          </signed>
+          <signed hand="PW">
+            <person>
+              <persName ref="#Wranitzky">
+                <forename>Paul</forename>
+                <surname>Wranizky</surname>
+              </persName>
+              <lb/>derzeit <occupation>Sekretär</occupation> <abbr type="suspension">derselb.</abbr>
+            </person>
+          </signed>
+        </closer>
+      </div>
+      <pb xml:id="BH_194_2v"/>
+      <div xml:id="2v">
+        <p>An <persName ref="#Beethoven"><roleName type="honorific">Herrn</roleName> <nameLink>Van</nameLink> <surname>Betthoven</surname></persName>.</p>
+      </div>
+    </text>
+
+    <text xml:id="traduzioneItaliana" xml:lang="it" corresp="#originaleTedesco">
+      <pb corresp="#BH_194_1r"/>
+      <div corresp="#1r">
+        <opener hand="PW">
+          <addrLine>
+            Al <persName>
+              <roleName type="honorific">Signor</roleName>
+              <nameLink>Van</nameLink>
+              <surname>Bethoven</surname>
+            </persName>
+          </addrLine>
+          <salute>Stimatissimo Signore!</salute>
+        </opener>
+        <p hand="PW">La <orgName>Società musicale delle vedove e degli orfani</orgName> si onora di riservarLe un biglietto gratuito, accluso alla presente, per tutte le future accademie; Le piaccia solo di presentarlo ogni volta e di conservarlo.</p>
+        <p hand="PW">Perdoni se la Società, che ha a cuore la cura delle vedove e degli orfani, non può mostrare in altro modo  la propria gratitudine per i servizi che già Le avete reso: voglia accettare questa come una prova della sua buona volontà ed essere così gentile da sostenere ancora in futuro le vedove e gli orfani della Società con i Suoi preziosi talenti.</p>
+        <closer>
+          <salute hand="PW">Sempre obbligata</salute>
+          <signed hand="PW">
+            La <orgName>Società musicale delle vedove e degli orfani</orgName>
+          </signed>
+          <p hand="PW">
+            <foreign xml:lang="la">Ex <abbr type="suspension">concl.</abbr> Sessionis <lb/>de dato <date when="1797-01-20"><abbr type="superscription">20<sup>mo</sup></abbr> Januarij <lb/>797</date>.</foreign>
+          </p>
+          <dateline hand="PW">
+            <placeName ref="#Vienna">Vienna</placeName> <date when="1797-02-10">il 10 febbraio <lb/><abbr type="acronym">a. c.</abbr></date>
+          </dateline>
+          <signed hand="#AS">
+            <person>
+              <persName ref="#Salieri">
+                <forename><abbr type="suspension">Ant.</abbr></forename>
+                <surname>Salieri</surname>
+              </persName>
+              <occupation><choice><abbr type="acronym">m.d.c.</abbr><expan>maestro di cappella</expan></choice></occupation>
+            </person>
+          </signed>
+          <signed hand="PW">
+            <person>
+              <persName ref="#Wranitzky">
+                <forename>Paul</forename>
+                <surname>Wranizky</surname>
+              </persName>
+              <lb/>attuale <occupation>Segretario</occupation> <abbr type="suspension">della med.</abbr>
+            </person>
+          </signed>
+        </closer>
+      </div>
+      <pb corresp="#BH_194_2v"/>
+      <div corresp="#2v">
+        <p>Al <persName ref="#Beethoven"><roleName type="honorific">Signor</roleName> <nameLink>Van</nameLink> <surname>Betthoven</surname></persName>.</p>
+      </div>
+    </text>
+  </group>
+</TEI>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it" class="scroller">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alice Caputa" />
+    <meta
+      name="description"
+      content="Archivio digitale dedicato alla vita e all'opera di Antonio Salieri (1750-1825)" />
+    <meta
+      name="keywords"
+      content="Salieri, opera, XVIII secolo, Vienna, Schubert, Beethoven" />
+    <title>
+      Archivio Salieri | Lettere
+    </title>
+
+    <!-- FAVICON -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5" />
+    <meta name="apple-mobile-web-app-title" content="Archivio Salieri" />
+    <meta name="application-name" content="Archivio Salieri" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- FONTS -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" />
+    <!-- Icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- FOGLIO DI STILE -->
+    <link rel="stylesheet" href="style/style.css"/>
+
+    <!-- SCRIPT ESTERNO -->
+    <script src="js/script.js"></script>
+  
+  </head>
+  <body>
+    <div class="scrolled">
+      <nav class="secondary">
+        <span id="home"><a href="index.html">Home</a></span>
+        <span><a href="#">Progetto</a></span>
+        <span><a href="#">Biografia</a></span>
+        <span><a href="listitems.html">Catalogo</a></span>
+        <span class="actualPage"><a href="pathways.html">Percorsi</a></span>
+      </nav>
+      <form class="searchBar" action="action_page.php">
+        <input type="text" placeholder="Cerca.." name="search" autocomplete="off">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <div class="abHead letters">
+        <a href="pathways.html">Torna ai percorsi <i class="bi bi-box-arrow-left"></i></a>
+        <a href="#">Condividi <i class="bi bi-share"></i></a>
+        <a href="#">Stampa <i class="bi bi-printer"></i></a>
+      </div>
+      <section class="lettersTop">
+        <h1>Lettere</h1>
+        <p>La sezione raccoglie la corrispondenza di Antonio Salieri finora digitalizzata. A questa si aggiungono alcune testimonianze epistolari, coeve quanto postume, nelle quali viene fatta menzione del compositore o della sua opera.</p>
+        <p>Tra i corrispondenti di Salieri si annoverano amici, allievi, compositori e letterati contemporanei, personalità legate alla corte imperiale. Tra i destinatari più frequenti, l'amico e futuro biografo <a class="bio" href="">Ignaz von Mosel (1772-1844)</a>, il compositore e segretario della Tonkünstler-Societät <a class="bio" href="">Paul Wranitzky (1756-1808)</a>, il sovrintendente musicale alla corte imperiale, conte <a class="bio" href="">Johann Wenzel von Ugarte (1748-1796)</a>, ed il suo successore, conte <a class="bio" href="">Johann Ferdinand von Kuefstein (1852-1818)</a>.</p>
+        <p>È possibile filtrare le lettere in base al <span class="dark">ruolo</span> di Salieri (mittente, destinatario, soggetto), oppure navigare la collezione per <span class="light">corrispondente</span>, <span class="light">data</span>, <span class="light">luogo</span> di redazione e <span class="light">contenuto</span> generale della missiva.</p>
+      </section>
+    </div>
+    <div class="scrolled bis">
+      <div class="lettersBody">
+        <div id="btnDiv">
+          <button class="btnStyled tablinks" onclick="Hider(event, 'mitt')">❧ Salieri come mittente ☙</button>
+          <button class="btnStyled tablinks" onclick="Hider(event, 'dest')">❧ Salieri come destinatario ☙</button>
+          <button class="btnStyled tablinks" onclick="Hider(event, 'sogg')">❧ Salieri come soggetto ☙</button>
+        </div>
+        <aside class="left">
+          <p>Filtra per ...</p>
+          <div class="filterBar">
+            <button class="accordion">Corrispondente</button>
+            <div class="panel">
+              <form>
+                <input type="checkbox">
+                <label>Non identificato</label><br>
+                <input type="checkbox">
+                <label>Beethoven, L. van</label><br>
+                <input type="checkbox">
+                <label>Berlioz, H.</label><br>
+                <input type="checkbox">
+                <label>Ferrand, H.</label><br>
+                <input type="checkbox">
+                <label>Kuefstein, J. F. von</label><br>
+                <input type="checkbox">
+                <label>Salieri, A.</label><br>
+                <input type="checkbox">
+                <label>Wranitzky, P.</label><br>
+              </form>
+            </div>
+            <button class="accordion">Epoca</button>
+            <div class="panel">
+              <form>
+                <input type="checkbox">
+                <label>1797</label><br>
+                <input type="checkbox">
+                <label>1815-1822</label><br>
+                <input type="checkbox">
+                <label>1862</label><br>
+              </form>
+            </div>
+            <button class="accordion">Luogo</button>
+            <div class="panel">
+              <form>
+                <input type="checkbox">
+                <label>Non identificato</label><br>
+                <input type="checkbox">
+                <label>Parigi</label><br>
+                <input type="checkbox">
+                <label>Vienna</label><br>
+              </form>
+            </div>
+            <button class="accordion">Tema</button>
+            <div class="panel">
+              <form>
+                <input type="checkbox" id="vocale" name="vocale">
+                <label for="vocale">Musica vocale</label><br>
+                <input type="checkbox" id="strumentale" name="strumentale">
+                <label for="strumentale">Musica strumentale</label><br>
+                <input type="checkbox" id="allievi" name="allievi">
+                <label for="allievi">Allievi</label><br>
+                <input type="checkbox" id="privata" name="privata">
+                <label for="privata">Vita privata</label><br>
+                <input type="checkbox" id="corte" name="corte">
+                <label for="corte">Corte imperiale</label><br>
+                <input type="checkbox" id="tonkuenstler" name="tonkuenstler">
+                <label for="tonkuenstler">Tonkünstler-Societät</label><br>
+                <input type="checkbox" id="ricez" name="ricez">
+                <label for="ricez">Ricezione postuma</label><br>
+              </form>
+            </div>
+          </div>
+        </aside>
+        <aside class="right">
+          <div class="guide">
+            <i class="bi bi-question-lg" style="right: 96px"></i>
+            <p>È possibile filtrare le lettere selezionando una o più opzioni disponibili nella barra laterale, alternativamente o in combinazione con i bottoni in alto. Nella porzione superiore della pagina è inoltre disponibile una funzione di ricerca libera: i termini qui inseriti verranno ricercati nel titolo o nei metadati del documento.</p>
+          </div>
+          <div class="box">
+            <h3><i class="bi bi-plus-lg"></i> Ultimo item inserito</h3>
+            <a href="item.html"><p>Antonio Salieri e Paul Wranitzky a Ludwig van Beethoven. Vienna, 10 febbraio 1797</p></a>
+          </div>
+        </aside>
+        <section class="gridContainer">
+          <div class="grid-item">
+              <div class="card text imper mitt">
+                <a href="#">
+                  <img src="img/items/lettera.jpg" />
+                  <div class="textDescr">
+                    <h4>Antonio Salieri a Ignoto (Johann Ferdinand von Kuefstein?)</h4>
+                    <p class="date">Vienna (?), 1815-1822</p>
+                  </div>
+                </a>
+              </div>
+          </div>
+          <div class="grid-item">
+              <div class="card text post sogg">
+                <a href="#">
+                  <img src="img/items/letteraBerlioz.JPEG" />
+                  <div class="textDescr">
+                    <h4>Hector Berlioz a Humbert Ferrand</h4>
+                    <p class="date">Parigi, 22 marzo 1862</p>
+                  </div>
+                </a>
+              </div>
+          </div>
+          <div class="grid-item">
+            <div class="card text pupils mitt">
+              <a href="item.html">
+                <img src="img/items/invito_Beethoven.jpg" alt="Lettera di Salieri e Paul Wranitzky a Beethoven" />
+                <div class="textDescr">
+                    <h4>Antonio Salieri e Paul Wranitzky a Ludwig van Beethoven</h4>
+                    <p class="date">Vienna, 10 febbraio 1797</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="dark">&copy; Copyright 2024 - Archivio Salieri | CC BY-NC</footer>
+    </div>
+    <script>
+      Accordion();
+    </script>
+  </body>
+</html>
